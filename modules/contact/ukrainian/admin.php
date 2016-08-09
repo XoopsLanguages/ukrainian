@@ -1,0 +1,46 @@
+<?php
+// index
+define('_AM_CONTACT_INDEX_ADMENU1', "Повідомлення");
+define('_AM_CONTACT_INDEX_TOTAL', "There are <span class='green'>%s</span> Повідомлення з нашої бази даних");
+// Contact
+define('_AM_CONTACT_ID', "Id");
+define('_AM_CONTACT_SUBJECT', "Тема");
+define('_AM_CONTACT_DEPARTMENT', "Рубрика");
+define('_AM_CONTACT_SUBMITTER', "Подавець");
+define('_AM_CONTACT_DATE', "Дата подання");
+define('_AM_CONTACT_MESSAGE', "Повідомлення");
+define('_AM_CONTACT_EMAIL', "Пошта");
+define('_AM_CONTACT_URL', "URL");
+define('_AM_CONTACT_VIEWURL', "Подивитись URL");
+define('_AM_CONTACT_ICQ', "Skype");
+define('_AM_CONTACT_COMPANY', "Компанія");
+define('_AM_CONTACT_LOCATION', "Розташування");
+define('_AM_CONTACT_IP', "IP");
+define('_AM_CONTACT_PHONE', "Телефон");
+define('_AM_CONTACT_ADDRESS', "Адреса");
+define('_AM_CONTACT_ACTION', "Дія");
+define('_AM_CONTACT_VIEW', "Вид");
+define('_AM_CONTACT_REPLY', "Відповісти");
+define('_AM_CONTACT_HAVEREPLY', "Відповіли");
+define('_AM_CONTACT_HAVENTREPLY', "Не відповіли");
+define('_AM_CONTACT_FROM', "Від");
+define('_AM_CONTACT_NAMEFROM', "Ім'я");
+define('_AM_CONTACT_MAILFROM', "Пошта");
+define('_AM_CONTACT_TO', "Кому");
+define('_AM_CONTACT_NAMETO', "Ім'я");
+define('_AM_CONTACT_MAILTO', "Пошта");
+define('_AM_CONTACT_TITLE', "Назва");
+define('_AM_CONTACT_INFO', "Информація");
+define('_AM_CONTACT_MSG_EXIST', "Обране повідомлення не існує");
+define('_AM_CONTACT_MSG_DELETE', "Ви впевнені, що хочете видалити це повідомлення та усі відповіді?");
+define('_AM_CONTACT_MSG_DELETED', "Обране повідомлення було видалено");
+define('_AM_CONTACT_MSG_DELETEERROR', "Помилку у видаленні повідомлення");
+define('_AM_CONTACT_MSG_PRUNE_DELETED', "%s повідомлення видалено");
+define('_AM_CONTACT_TOOLS_PRUNE', "Видалити повідомлення");
+define('_AM_CONTACT_TOOLS_PRUNE_BEFORE', "Видалити повідомлення,що були опубліковані раніше");
+define('_AM_CONTACT_TOOLS_PRUNE_REPLYONLY', "Видалити тільки повідомлення з відповдями");
+define('_AM_CONTACT_LOGS_FORM', "Форма реєстрації");
+define('_AM_CONTACT_LOGS_COLUMN', "Оберіть необхідну колонку");
+define('_AM_CONTACT_LOGS_COLUMN_PHONE', "Телефон");
+define('_AM_CONTACT_LOGS_COLUMN_URL', "URL");
+define('_AM_CONTACT_LOGS_COLUMN_MAIL', "Пошта");
