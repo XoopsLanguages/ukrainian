@@ -1,0 +1,501 @@
+<?php
+// $Id: main.php 17 2007-11-18 14:22:36Z LupusC $
+if(defined('MAIN_DEFINED')) return;
+define('MAIN_DEFINED', true);
+define('_MD_ERROR', "Помилка");
+define('_MD_SELFORUM', "Обрати Форум");
+define('_MD_THIS_FILE_WAS_ATTACHED_TO_THIS_POST', "Доданий файл:");
+define('_MD_ALLOWED_EXTENSIONS', "Дозволені розширення");
+define('_MD_MAX_FILESIZE', "Максимальний розмір файлу");
+define('_MD_ATTACHMENT', "Додати файл");
+define('_MD_FILESIZE', "Розмір");
+define('_MD_HITS', "Hits");
+define('_MD_GROUPS', "Групи:");
+define('_MD_DEL_ONE', "Видалити лише це повідомлення");
+define('_MD_DEL_RELATED', "Видалити усі повідомлення у цій темі");
+define('_MD_MARK_ALL_FORUMS', "Відмітити усі форуми");
+define('_MD_MARK_ALL_TOPICS', "Відмітити усі теми");
+define('_MD_MARK_UNREAD', "непрочитане");
+define('_MD_MARK_READ', "прочитане");
+define('_MD_ALL_FORUM_MARKED', "Усі форуми виділені");
+define('_MD_ALL_TOPIC_MARKED', "Усі теми виділені");
+define('_MD_BOARD_DISCLAIMER', "Відмова на форумі");
+//index.php
+define('_MD_ADMINCP', "Панель адміна");
+define('_MD_FORUM', "Форум");
+define('_MD_WELCOME', "Ласкаво просимо на %s Форум.");
+define('_MD_TOPICS', "Теми");
+define('_MD_POSTS', "Повідомлення");
+define('_MD_DIGESTS', "Дайджест");
+define('_MD_LASTPOST', "Останнє повідомлення");
+define('_MD_MODERATOR', "Модератор");
+define('_MD_NEWPOSTS', "Нові повідомлення");
+define('_MD_NONEWPOSTS', "Немає нових повідомлень");
+define('_MD_PRIVATEFORUM', "Неактивний Форум");
+define('_MD_BY', "Розміщенно");// Розміщенно
+define('_MD_TOSTART', "Для того, щоб почати перегляд повідомлень, оберіть форум , який ви хочете відвідати зі списку нище.");
+define('_MD_TOTALTOPICSC', "Загалом Тем: ");
+define('_MD_TOTALPOSTSC', "Загалом Повідомлень: ");
+define('_MD_TOTALUSER', "Загалом Користавачів: ");
+define('_MD_TIMENOW', "Час зараз  %s");
+define('_MD_USER_LASTVISIT', "Ваше останнє відвідування:  %s");
+define('_MD_USER_LASTPOST', "Ваше останнє повідомлення:  %s");
+define('_MD_USER_NOLASTPOST', "Ви ще не залишали повідомлень");
+define('_MD_USER_TOPICS', "Ваші теми:  %s");
+define('_MD_USER_POSTS', "Повідомлення:  %s");
+define('_MD_USER_DIGESTS', "Дайджести:  %s");
+define('_MD_VIEW_NEWPOSTS', "Переглянути нові повідомлення");
+define('_MD_ADVSEARCH', "Розширений пошук");
+define('_MD_POSTEDON', "Розміщенно на: ");
+define('_MD_SUBJECT', "Тема");
+define('_MD_INACTIVEFORUM_NEWPOSTS', "Неактивний форум з новими повідомленнями");
+define('_MD_INACTIVEFORUM_NONEWPOSTS', "Неактивний форум без нових повідомлень");
+define('_MD_SUBFORUMS', "Підфоруми");
+define('_MD_MAINFORUMOPT', "Головні опції");
+define('_MD_PENDING_POSTS_FOR_AUTH', "Повідомленні очікуючі на одобрення");
+define('_MD_TODAYTOPICSC', "Сьогоднішні теми: ");
+define('_MD_TODAYPOSTSC', "Сьогоднішні повідомлення: ");
+define('_MD_TOTALDIGESTSC', "Сьогоднішні дайджести:");
+//page_header.php
+define('_MD_MODERATEDBY', "Модеровано");
+define('_MD_SEARCH', "Пошук");
+define('_MD_FORUMINDEX', "Список форумів");
+define('_MD_POSTNEW', "Нова тема");
+define('_MD_REGTOPOST', "Зареєструйтесь, щоб мати можливість відправляти повідомлення");
+//search.php
+define('_MD_SEARCHALLFORUMS', "Пошук на усіх форумах");
+define('_MD_FORUMC', "Форум");
+define('_MD_AUTHORC', "Автор:");
+define('_MD_SORTBY', "Сортування за");
+define('_MD_DATE', "Дата");
+define('_MD_TOPIC', "Тема");
+define('_MD_POST2', "Повідомлення");
+define('_MD_USERNAME', "Ім'я користувача");
+define('_MD_BODY', "Основна частина");
+define('_MD_SINCE', "З ");
+//viewforum.php
+define('_MD_REPLIES', "Відповіді");
+define('_MD_POSTER', "Постер");
+define('_MD_VIEWS', "Перегляди");
+define('_MD_MORETHAN', "Нові повідомлення [Популярне]");
+define('_MD_MORETHAN2', "Немає нових повідомлень  [Популярне]");
+define('_MD_TOPICSHASATT', "Тема має прикріплення");
+define('_MD_TOPICHASPOLL', "Тема має опитування");
+define('_MD_TOPICLOCKED', "Тема закрита");
+define('_MD_LEGEND', "Легенда");
+define('_MD_NEXTPAGE', "Наступна сторінка");
+define('_MD_SORTEDBY', "Сортировано за");
+define('_MD_TOPICTITLE', "Назва теми");
+define('_MD_NUMBERREPLIES', "Кількість відповідей");
+define('_MD_TOPICPOSTER', "Постер теми");
+define('_MD_TOPICTIME', "Дата опублікування");
+define('_MD_LASTPOSTTIME', "Час останнього повідомлення");
+define('_MD_ASCENDING', "Висхідний порядок");
+define('_MD_DESCENDING', "Спадний порядок");
+define('_MD_FROMLASTHOURS', "За останні %s годин");
+define('_MD_FROMLASTDAYS', "за останні %s днів");
+define('_MD_THELASTYEAR', "За останній рік");
+define('_MD_BEGINNING', "Спочатку");
+define('_MD_SEARCHTHISFORUM', "Пошук на цьому форумі");
+define('_MD_TOPIC_SUBJECTC', "Додання перед темою:");
+define('_MD_RATINGS', "Рейтинг");
+define('_MD_CAN_ACCESS', "Ви <strong>маєте</strong> доступ на  форум.<br />");
+define('_MD_CANNOT_ACCESS', "Ви <strong>не маєте</strong> доступу на форум.<br />");
+define('_MD_CAN_POST', "Ви <strong>можете</strong> розпочати нову тему.<br />");
+define('_MD_CANNOT_POST', "Ви <strong>не можете</strong> розпочати нову тему.<br />");
+define('_MD_CAN_VIEW', "Ви <strong>можете</strong> переглянути тему.<br />");
+define('_MD_CANNOT_VIEW', "Ви <strong>не можете</strong> переглянути тему.<br />");
+define('_MD_CAN_REPLY', "Ви <strong>можете</strong> відповідати на повідомлення.<br />");
+define('_MD_CANNOT_REPLY', "Ви <strong>не можете</strong> відповідати на повідомлення.<br />");
+define('_MD_CAN_EDIT', "Ви <strong>можете</strong> редагувати ваші повідомлення.<br />");
+define('_MD_CANNOT_EDIT', "Ви <strong> не можете</strong> редагувати ваші повідомлення.<br />");
+define('_MD_CAN_DELETE', "Ви <strong>можете</strong> видалити ваші повідомлення.<br />");
+define('_MD_CANNOT_DELETE', "Ви <strong>не можете</strong> видалити ваші повідомлення.<br />");
+define('_MD_CAN_ADDPOLL', "Ви <strong>можете</strong> додавати нові опитування.<br />");
+define('_MD_CANNOT_ADDPOLL', "Ви <strong>не можете</strong> додавати нові опитування.<br />");
+define('_MD_CAN_VOTE', "Ви <strong>можете</strong> голосувати у опитуваннях.<br />");
+define('_MD_CANNOT_VOTE', "Ви <strong>не можете</strong> голосувати у опитуваннях.<br />");
+define('_MD_CAN_ATTACH', "Ви <strong>можете</strong> прикріпляти файли до повідомлень.<br />");
+define('_MD_CANNOT_ATTACH', "Ви <strong>не можете</strong> прикріпляти файли до повідомлень.<br />");
+define('_MD_CAN_NOAPPROVE', "Ви <strong>можете</strong> публікувати без одобрення.<br />");
+define('_MD_CANNOT_NOAPPROVE', "Ви <strong>не можете</strong> публікувати без одобрення.<br />");
+define('_MD_CAN_TYPE', "Ви <strong>можете</strong> використовувати тип теми.<br />");
+define('_MD_CANNOT_TYPE', "Ви <strong>не можете</strong> використовувати тип теми.<br />");
+define('_MD_CAN_HTML', "Ви <strong>можете</strong> використовувати HTML синтаксис.<br />");
+define('_MD_CANNOT_HTML', "Ви <strong>не можете</strong> використовувати HTML синтаксис.<br />");
+define('_MD_CAN_UPLOAD', "Ви <strong>можете</strong> завантажувати.<br />");
+define('_MD_CANNOT_UPLOAD', "Ви <strong>не можете</strong> завантажувати.<br />");
+define('_MD_CAN_SIGNATURE', "Ви <strong>можете</strong>використовувати підпис.<br />");
+define('_MD_CANNOT_SIGNATURE', "Ви <strong>не можете</strong>використовувати підпис.<br />");
+define('_MD_IMTOPICS', "Важливі теми");
+define('_MD_NOTIMTOPICS', "Теми форуму");
+define('_MD_FORUMOPTION', "Опції форуму");
+define('_MD_VAUP', "Переглянути усі невідповідені повідомлення");
+define('_MD_VANP', "Переглянути усі нові повідомлення");
+define('_MD_UNREPLIED', "Невідповідені теми");
+define('_MD_UNREAD', "непрочитані теми");
+define('_MD_ALL', "усі теми");
+define('_MD_ALLPOSTS', "усі повідомлення");
+define('_MD_VIEW', "Переглянути");
+//viewtopic.php
+define('_MD_AUTHOR', "Автор");
+define('_MD_LOCKTOPIC', "Закрити цю тему");
+define('_MD_UNLOCKTOPIC', "Відкрити цю тему");
+define('_MD_UNSTICKYTOPIC', "Зробити цю тему Непопулярною");
+define('_MD_STICKYTOPIC', "Зробити цб тему популярною");
+define('_MD_DIGESTTOPIC', "Зробити цю тему дайджестом");
+define('_MD_UNDIGESTTOPIC', "Не зробити цю тему дайджестом");
+define('_MD_MERGETOPIC', "Об'єднати цю тему");
+define('_MD_MOVETOPIC', "Перемістити цю тему");
+define('_MD_DELETETOPIC', "Видалити цю тему");
+// irmtfan add restore to viewtopic
+define('_MD_RESTORETOPIC', "Відновити цю тему");
+define('_MD_TOP', "Наверх");
+define('_MD_BOTTOM', "Донизу");
+define('_MD_PREVTOPIC', "Попередня тема");
+define('_MD_NEXTTOPIC', "Наступна тема");
+define('_MD_GROUP', "Група:");
+define('_MD_QUICKREPLY', "Швидка відповідь");
+define('_MD_POSTREPLY', "Відповідь повідомлення");
+define('_MD_PRINTTOPICS', "Друк Теми");
+define('_MD_PRINT', "Друкувати");
+define('_MD_REPORT', "Звіт");
+define('_MD_PM', "Особисті повідомлення");
+define('_MD_EMAIL', "Електрона пошта");
+define('_MD_WWW', "WWW");
+define('_MD_AIM', "AIM");
+define('_MD_YIM', "YIM");
+define('_MD_MSNM', "MSNM");
+define('_MD_ICQ', "ICQ");
+define('_MD_PRINT_TOPIC_LINK', "URL  для цієї дискусії");
+define('_MD_ADDTOLIST', "Додати до вашого контакт списку");
+define('_MD_TOPICOPT', "Опції теми");
+define('_MD_VIEWMODE', "Переглянути режим");
+define('_MD_NEWEST', "Найновіше попереду");
+define('_MD_OLDEST', "Найстаріше попереду");
+define('_MD_FORUMSEARCH', "Пошук форума");
+define('_MD_RATED', "Оцінено:");
+define('_MD_RATE', "Оцінити Тему");
+define('_MD_RATEDESC', "Оцінити цю Тему");
+define('_MD_RATING', "Голосувати зараз");
+define('_MD_RATE1', "Жалхливо");
+define('_MD_RATE2', "Погано");
+define('_MD_RATE3', "Посередньо");
+define('_MD_RATE4', "Добре");
+define('_MD_RATE5', "Відмінно");
+define('_MD_TOPICOPTION', "Опції теми");
+define('_MD_KARMA_REQUIREMENT', "Ваша персональна карма %s не досягнула необхідної карми %s. <br /> Спробуйте пізніше");
+define('_MD_REPLY_REQUIREMENT', "Щоб переглянути це повідомлення, вам необхідно увійти та спочатку відпости.");
+define('_MD_TOPICOPTIONADMIN', "Опції теми адміна");
+define('_MD_POLLOPTIONADMIN', "Опції опитування адміна");
+define('_MD_EDITPOLL', "Редагувати це опитування");
+define('_MD_DELETEPOLL', "Видалити це опитування");
+define('_MD_RESTARTPOLL', "Поновити це опитування");
+define('_MD_ADDPOLL', "Додати опитування");
+define('_MD_QUICKREPLY_EMPTY', "Ввести швидку відповідь тут");
+define('_MD_LEVEL', "Рівень:");
+define('_MD_HP', "HP :");
+define('_MD_MP', "MP :");
+define('_MD_EXP', "EXP :");
+define('_MD_BROWSING', "Перегляд цієї теми:");
+define('_MD_POSTTONEWS', "Віпдравити це повідомлення до новин");
+define('_MD_EXCEEDTHREADVIEW', "Кількість повідомлень перевищує порогове значення для режиму потоку.<br /> Змінити режим");
+//forumform.inc
+define('_MD_QUOTE', "Цитата");
+define('_MD_VIEW_REQUIRE', "Переглянути вимоги");
+define('_MD_REQUIRE_KARMA', "Карма");
+define('_MD_REQUIRE_REPLY', "Відповідь повідомлення");
+define('_MD_REQUIRE_NULL', "Немає вимог");
+define('_MD_SELECT_FORMTYPE', "Обрати бажаний тип форми");
+define('_MD_FORM_COMPACT', "Компактний");
+define('_MD_FORM_DHTML', "DHTML");
+// ERROR messages
+define('_MD_ERRORFORUM', "ПОМИЛКА: Форум не обрано!");
+define('_MD_ERRORPOST', "ПОМИЛКА: Повідомлення не обрано!");
+define('_MD_NORIGHTTOVIEW', "У вас немає прав переглядати цю тему.");
+define('_MD_NORIGHTTOPOST', "У вас немає прав залишати повідомлення на цьому форумі.");
+define('_MD_NORIGHTTOEDIT', "У вас немає прав редагувати на цьому форумі.");
+define('_MD_NORIGHTTOREPLY', "У вас немає прав відповідати на цьому форумі.");
+define('_MD_NORIGHTTOACCESS', "У вас немає прав доступу до цього форуму.");
+define('_MD_ERRORTOPIC', "ПОМИЛКА: Тему не обрано!");
+define('_MD_ERRORCONNECT', "ПОМИЛКА: Неможливо з'єднатися з базою даних форуму.");
+define('_MD_ERROREXIST', "ПОМИЛКА: Обраний вами форум не існує. Будь ласка, спробуйте знову.");
+define('_MD_ERROROCCURED', "Сталася помилка");
+define('_MD_COULDNOTQUERY', "Не вдалося запросити базу даних форуму.");
+define('_MD_FORUMNOEXIST', "Помилка - Обраний форум/тема не існує. Будь ласка, спробуйте знову.");
+define('_MD_USERNOEXIST', "Такого користувача не існує. Будь ласка, повернитесь знову до пошуку.");
+define('_MD_COULDNOTREMOVE', "Помилка - Неможливо видалити повідомлення з бази даних!");
+define('_MD_COULDNOTREMOVETXT', "Помилка - Неможливо видалити текст повідомлення!");
+define('_MD_TIMEISUP', "Ви вичерпали ліміт часу для редагування вашого повідомлення.");
+define('_MD_TIMEISUPDEL', "Ви вичерпали ліміт часу для видалення вашого повідомлення.");
+//reply.php
+define('_MD_ON', "на");//Posted on
+define('_MD_USERWROTE', " %s  написав:");// %s is username
+define('_MD_RE', "Re");
+//post.php
+define('_MD_EDITNOTALLOWED', "Вам не дозволено редагувати це повідомлення!");
+define('_MD_EDITEDBY', "Відредаговано");
+define('_MD_ANONNOTALLOWED', "Анонімним користувачам не дозволено публікувати повідомлення. .<br /> Будь ласка, зареєструйтеся.");
+define('_MD_THANKSSUBMIT', "Дякуємо за ваше повідомлення!");
+define('_MD_REPLYPOSTED', "Відповідь до вашої теми було опубліковано.");
+define('_MD_HELLO', "Привіт %s,");
+define('_MD_URRECEIVING', "Ви отримали цього електроного листа тому,що на ваше повідомлення на %s на форумі отримано відповідь");// %s назва вашого сайту
+define('_MD_CLICKBELOW', "Натисніть на посилання нище, щоб переглянути тему:");
+define('_MD_WAITFORAPPROVAL', "Дякуємо. Ваше повідомлення буде одобрено перед публікацією.");
+define('_MD_POSTING_LIMITED', "Чом би не взяти перерву та повернутися через %d секунд.");
+//forumform.inc
+define('_MD_NAMEMAIL', "Ім'я /Електрона пошта:");
+define('_MD_LOGOUT', "Вийти");
+define('_MD_REGISTER', "Зареєструватись");
+define('_MD_SUBJECTC', "Тема:");
+define('_MD_MESSAGEICON', "Іконка повідомлення:");
+define('_MD_MESSAGEC', "Повідомлення:");
+define('_MD_ALLOWEDHTML', "Дозволений HTML:");
+define('_MD_OPTIONS', "Опції:");
+define('_MD_POSTANONLY', "Опублікувати анонімно");
+define('_MD_DOSMILEY', "Вкючити смайли");
+define('_MD_DOXCODE', "Включити Xoops Code");
+define('_MD_DOBR', "Включити розрив строки (Пропонуєть вимкнути якщо HTML включено)");
+define('_MD_DOHTML', "Включити html тег");
+define('_MD_NEWPOSTNOTIFY', "Повідомити мене про нові повідомлення у цій темі");
+define('_MD_ATTACHSIG', "Прикріпити підпис");
+define('_MD_POST', "Опублікувати");
+define('_MD_SUBMIT', "Подати");
+define('_MD_CANCELPOST', "Відмінити повідомлення");
+define('_MD_REMOVE', "Видалити");
+define('_MD_UPLOAD', "Закачати");
+// forumuserpost.php
+define('_MD_ADD', "Додати");
+define('_MD_REPLY', "Відповісти");
+// topicmanager.php
+define('_MD_VIEWTHETOPIC', "Переглянути тему");
+define('_MD_RETURNTOTHEFORUM', "Повернутися до форуму");
+define('_MD_RETURNFORUMINDEX', "Повернутися до списку форумів");
+define('_MD_ERROR_BACK', "Помилка - Будь ласка повернитесь та спробуйте знову.");
+define('_MD_GOTONEWFORUM', "Переглянути оновлені теми");
+define('_MD_TOPICDELETE', "Тема була видалена.");
+// irmtfan add restore to viewtopic
+define('_MD_TOPICRESTORE', "Тема була поновлена.");
+define('_MD_TOPICMERGE', "Тема була об'єднана.");
+define('_MD_TOPICMOVE', "Тема була переміщена.");
+define('_MD_TOPICLOCK', "Тема була закрита.");
+define('_MD_TOPICUNLOCK', "Тема була відкрита.");
+define('_MD_TOPICSTICKY', "Тема була зроблена Популярною.");
+define('_MD_TOPICUNSTICKY', "Тема була прибрана з Популярного.");
+define('_MD_TOPICDIGEST', "Тема поміщена у дайджест.");
+define('_MD_TOPICUNDIGEST', "Тема була прибрана з дайджесту.");
+define('_MD_DELETE', "Видалити");
+define('_MD_MOVE', "Перемістити");
+define('_MD_MERGE', "Об'єднати");
+define('_MD_LOCK', "Закрити");
+define('_MD_UNLOCK', "Відкрити");
+define('_MD_STICKY', "Популярне");
+define('_MD_UNSTICKY', "Непопулярне");
+define('_MD_DIGEST', "Дайджест");
+define('_MD_UNDIGEST', "Недайджест");
+define('_MD_DESC_DELETE', "Одного разу натиснув кнопку видалення на цьому форумі обраної вами теми, та усі споріднені повідомлення будуть <strong>назавжди</strong> видалені.");
+// irmtfan add restore to viewtopic
+define('_MD_DESC_RESTORE', "Одного разу натиснув кнопку відновлення на цьому форумі обраної теми , усі споріднені повідомлення будуть відновлені.");
+define('_MD_DESC_MOVE', "Одного разу натиснув кнопку перемістити на цьому форумі обраної теми , усі споріднені повідомлення будуть переміщені до обраного форуму. ");
+define('_MD_DESC_MERGE', "Одного разу натиснув кнопку об'єднання на цьому форумі обраної теми , усі споріднені повідомлення будуть об'єднанні до обраної теми. <br /><strong>Призначення теми ID повинно бути менше ніж поточне</strong>.");
+define('_MD_DESC_LOCK', "Одного разу натиснув кнопку закрити на цьому форумі обраної теми , усі споріднені повідомлення будуть закриті. Ви зможете відкрити пізніше, якщо побажаєте.");
+define('_MD_DESC_UNLOCK', "Одного разу натиснув кнопку відкрити на цьому форумі обраної теми , усі споріднені повідомлення будуть відкриті. Ви зможете закрити знову пізніше, якщо побажаєте.");
+define('_MD_DESC_STICKY', "Одного разу натиснув кнопку Популярне на цьому форумі обраної теми , усі споріднені повідомлення будуть виділені як Популярне.Ви зможете зняти Популярне знову, якщо побажаете.");
+define('_MD_DESC_UNSTICKY', "Одного разу натиснув кнопку НеПопулярне на цьому форумі обраної теми , усі споріднені повідомлення будуть виділені як НеПопулярне.Ви зможете зняти НеПопулярне знову, якщо побажаете.");
+define('_MD_DESC_DIGEST', "Одного разу натиснув кнопку Дайджест на цьому форумі обраної теми , усі споріднені повідомлення будуть поміщені у Дайджест.Ви зможете зняти Дайджест знову, якщо побажаете.");
+define('_MD_DESC_UNDIGEST', "Одного разу натиснув кнопкуприбрати з  Дайджесту на цьому форумі обраної теми , усі споріднені повідомлення будуть прибрані з Дайджесту.Ви зможете повернути Дайджесту знову, якщо побажаете.");
+define('_MD_MERGETOPICTO', "Об'єднати Тему до:");
+define('_MD_MOVETOPICTO', "Перемістити Тему до:");
+define('_MD_NOFORUMINDB', "Немає форумів у базі даних");
+// delete.php
+define('_MD_DELNOTALLOWED', "Вибачте, але вам не дозволено видалити це повідомлення.");
+define('_MD_AREUSUREDEL', "Ви впевненні,що хочете видалити це повідомлення та все спорідненні до нього повідомлення?");
+define('_MD_POSTSDELETED', "Обране повідомлення та усі спорідненні до нього повідомлення видалені.");
+define('_MD_POSTDELETED', "Обране повідомлення видалені.");
+define('_MD_POSTFIRSTWITHREPLYNODELETED', "Початкове повідомлення не може бути видалене якщо вже є відповіді <br />,щоб зробити це, видалить усю тему.");
+// definitions moved from global.
+define('_MD_THREAD', "Тема");
+define('_MD_FROM', "Від");
+define('_MD_JOINED', "Приєднано");
+define('_MD_ONLINE', "Онлайн");
+define('_MD_OFFLINE', "Оффлайн");
+define('_MD_FLAT', "Flat");
+// online.php
+define('_MD_USERS_ONLINE', "Користувачі онлайн:");
+define('_MD_ANONYMOUS_USERS', "Анонімні користувачі:");
+define('_MD_REGISTERED_USERS', "Зареєстровані користувачі:");
+define('_MD_BROWSING_FORUM', "Користувачі,які переглядають форум");
+define('_MD_TOTAL_ONLINE', "Усього %d користувачів онлайн.");
+define('_MD_ADMINISTRATOR', "Адміністратор");
+define('_MD_NO_SUCH_FILE', "Файлу не існує!");
+//define('_MD_ERROR_UPATEATTACHMENT', "Помилка з'вляється коли оновлюється прикріплення");
+// ratethread.php
+define('_MD_CANTVOTEOWN', "Ви не можете голосувати у темі яку ви подаєте.<br />Усі голосування зареєстроване та переглянуте.");
+define('_MD_VOTEONCE', "Будь ласка не голосуйте в одній та тій самй темі більше одного разу.");
+define('_MD_VOTEAPPRE', "Ваш голос зараховано.");
+define('_MD_THANKYOU', "Дякуємо,що витратили час на голосування тут у  %s");// %s is your site name
+define('_MD_VOTES', "Голоси");
+define('_MD_NOVOTERATE', "Ви не оцінили цю тему");
+// polls.php
+define('_MD_POLL_DBUPDATED', "База даних була оновлена успішно!");
+define('_MD_POLL_POLLCONF', "Налаштування Голосування");
+define('_MD_POLL_POLLSLIST', "Список голосувань");
+define('_MD_POLL_AUTHOR', "Автор цього голосування");
+define('_MD_POLL_DISPLAYBLOCK', "Відобразити у блоці?");
+define('_MD_POLL_POLLQUESTION', "Питання опитування");
+define('_MD_POLL_VOTERS', "Усього проголосувавших");
+define('_MD_POLL_VOTES', "Усього голосів");
+define('_MD_POLL_EXPIRATION', "Прострочено");
+define('_MD_POLL_EXPIRED', "Минулий");
+define('_MD_POLL_VIEWLOG', "Переглянути лог");
+define('_MD_POLL_CREATNEWPOLL', "Створити нове опитування");
+define('_MD_POLL_POLLDESC', "Опис опитування");
+define('_MD_POLL_DISPLAYORDER', "Відобразити порядок");
+define('_MD_POLL_ALLOWMULTI', "Дозволити багатозначний вибір?");
+define('_MD_POLL_NOTIFY', "Повідомити автора опитування, коли закінчиться строк?");
+define('_MD_POLL_POLLOPTIONS', "Опції");
+define('_MD_POLL_EDITPOLL', "Редагувати опитування");
+define('_MD_POLL_FORMAT', "Формат: рррр-мм-чч гг:хх:сс");
+define('_MD_POLL_CURRENTTIME', "Поточний час %s");
+define('_MD_POLL_EXPIREDAT', "Строк вийшов о %s");
+define('_MD_POLL_RESTART', "Поновити це опитування");
+define('_MD_POLL_ADDMORE', "Додати більше опцій");
+define('_MD_POLL_RUSUREDEL', "Ви впевнені,що хочете видалити це опитування та усі коментарі до нього?");
+define('_MD_POLL_RESTARTPOLL', "Повновити опитування");
+define('_MD_POLL_RESET', "Поновити усі логи для цього опитування?");
+define('_MD_POLL_ADDPOLL', "Додати опитування");
+define('_MD_POLLMODULE_ERROR', "xoopspoll модуль недоступний для користування");
+//report.php
+define('_MD_REPORTED', "Дякуємо, що звітували про це повідомлення/тему! Модератор найскоріше ознайомиться з вашим звітом.");
+define('_MD_REPORT_ERROR', "Виникла помилка під час відправлення вашого звіту.");
+define('_MD_REPORT_TEXT', "Повідомлення звіту:");
+define('_MD_PDF', "Створити PDF з повідомлення");
+define('_MD_PDF_PAGE', "Сторінка %s");
+//print.php
+define('_MD_COMEFROM', "Це повідомлення було від:");
+//viewpost.php
+define('_MD_VIEWALLPOSTS', "Усі повідомлення");
+define('_MD_VIEWTOPIC', "Тема");
+define('_MD_VIEWFORUM', "Форум");
+define('_MD_COMPACT', "Стислий");
+define('_MD_MENU_SELECT', "Відбір");
+define('_MD_MENU_HOVER', "Очікування");
+define('_MD_MENU_CLICK', "Клік");
+define('_MD_WELCOME_SUBJECT', " приєднався до форуму");
+define('_MD_WELCOME_MESSAGE', "Привіт,%s додав вас. Починаємо...");
+define('_MD_VIEWNEWPOSTS', "Переглянути нові повідомлення");
+define('_MD_INVALID_SUBMIT', "Подання недійсне. Ви перевищили час сеансу. Будь ласка, подайте знову або поверніться до вашого повідомлення та увійдіть, щоб знову подати, якщо необхідно.");
+define('_MD_ACCOUNT', "Акаунт");
+define('_MD_NAME', "Ім'я");
+define('_MD_PASSWORD', "Пароль");
+define('_MD_LOGIN', "Логін");
+define('_MD_APPROVE', "Підтвердження");
+define('_MD_RESTORE', "Поновлення");
+define('_MD_SPLIT_ONE', "Розділити");
+define('_MD_SPLIT_TREE', "Розділити усе споріднене");
+define('_MD_SPLIT_ALL', "Розділити усе споріднене");
+define('_MD_TYPE_ADMIN', "Режим адміну");
+define('_MD_TYPE_VIEW', "Режим перегляду");
+define('_MD_TYPE_PENDING', "Очікування");
+define('_MD_TYPE_DELETED', "Видалено");
+define('_MD_TYPE_SUSPEND', "Тимчасове блокування");
+define('_MD_DBUPDATED', "База даних поновлена успішно!");
+define('_MD_SUSPEND_SUBJECT', "Користувач %s тимчасово заблокован на %d днів");
+define('_MD_SUSPEND_TEXT', "Користувач %s тимчасово заблокован на %d днів згідно з :<br />[quote]%s[/quote]<br /><br />. Тимчасове блокування дісне до %s ");
+define('_MD_SUSPEND_UID', "ID користувача");
+define('_MD_SUSPEND_IP', "IP тимчасово заблоковано (повністю або частково)");
+define('_MD_SUSPEND_DURATION', "Тривалість тимчаосового блокування (Дні)");
+define('_MD_SUSPEND_DESC', "Причина тимчасового блокування");
+define('_MD_SUSPEND_LIST', "Список тимчасово заблокованих");
+define('_MD_SUSPEND_START', "Початок");
+define('_MD_SUSPEND_EXPIRE', "Кінець");
+define('_MD_SUSPEND_SCOPE', "Обсяг");
+define('_MD_SUSPEND_MANAGEMENT', "Управління модерації");
+define('_MD_SUSPEND_NOACCESS', "Ваш ID або IP було тимчасово заблоковано");
+define('_MD_NEWBB_TYPE', "Тип Теми");
+define('_MD_NEWBB_SEENOTGUEST', "<font color=\"red\"><b>Посилання тільки для зареєстрованих користувачів</b></font>");
+define('_MD_NEWBB_REPORTSUBJECT', "Внесок було повідомлено");
+define('_MD_NEWBB_GOTOLASTPOST', "Перейти до останнього повідомлення");
+define('_MD_EDITEDMSG', "Причина:");
+define('_MD_DELEDEDMSG', "Причина для видалення<br /><small>(якщо причина встановлена, користувач отримає повідомлення)</small>:");
+define('_MD_DELEDEDMSG_SUBJECT', "Видалення вашої статті");
+define('_MD_DELEDEDMSG_BODY', "Здравствуйте %s,
+Ви розмістили на форумі 
+
+%s
+було видалено мною 
+Як підтвердження, Я беру наступну інформацію: 
+
+%s
+
+З найкращими побажаннями 
+%s
+-------------------------
+Будь ласка не відповідайте на це повідомлення!
+%s");
+define('_MD_FORUMHOME', "Список форумів");
+define('_MD_NEWBB_SEEWAITREPORT', "Там були <font color=\"red\"> <b>%s</b> Внески повідомлені </font>");
+define('NEWBB_PDF_SUBJECT', "Назва: ");
+define('NEWBB_PDF_TOPIC', "Повідомлення:  ");
+define('NEWBB_PDF_AUTHOR', "Автор: ");
+define('NEWBB_PDF_DATE', "Дата: ");
+define('NEWBB_PDF_URL', "Посилання на повідомлення:");
+define('_NW_PAGE', "Сайте: ");
+define('_AM_NEWBB_NOTOPIC', "Немає повідомлень");
+define('_MD_NORSS_DATA', "Немає дати для відображення");
+define('_MD_NEWBB_STATS', "Статистика");
+define('_MD_POSTTIME', "розміщено");
+// 4.2
+define('_MD_ADVERTISING_BLOCK', "<br />Тут може бути ваша Реклама!<br />Зв'яжіться з нами,щоб дізнатись більше.");
+define('_MD_ADVERTISING_USER', "Реклама");
+define('_MD_SHARE_FACEBOOK', "Facebook");
+define('_MD_SHARE_TWITTER', "Twitter");
+define('_MD_SHARE_GOOGLEPLUS', "Google Plus");
+define('_MD_SHARE_LINKEDIN', "Linkedin");
+define('_MD_SHARE_STUMBLEUPON', "Stumbleupon");
+define('_MD_SHARE_FRIENDFEED', "FriendFeed");
+define('_MD_SHARE_REDDIT', "Reddit");
+define('_MD_SHARE_DELICIOUS', "Del.icio.us");
+define('_MD_SHARE_DIGG', "Digg");
+define('_MD_SHARE_TECHNORATI', "Technorati");
+define('_MD_SHARE_MRWONG', "Mr. Wong");
+//4.3
+define('_MD_GO', "Перейти");
+define('_MD_NEWBB_SEEUSERDATA', "Подивитись інформацію користувача");
+define('_MD_NEWBB_MAXKB', "Файл занадто великий (макс розмір %s Кб ).");
+define('_MD_NEWBB_UPLOAD_ERRNODEF', "невизначена Помилка");
+define('_MD_NEWBB_MAXUPLOADFILEINI', "Завантаженний файл перевищує the upload_max_filesize directive in php.ini.");
+define('_MD_NEWBB_MAXPIC', "Малюнок макс розмір %s X %s пікселів.");
+define('_MD_NEWBB_SEARCHDISABLED', "Пошук недоступний та не може бути використаний.");
+// irmtfan added messages
+define('_MD_NEWBB_HIDEUSERDATA', "Сховати інформацію користувача");
+define('_MD_NEWBB_HIDE', "Сховати");
+define('_MD_NEWBB_SEE', "Подивитись");
+// votepolls.php - irmtfan
+define('_MD_POLL_NOOPTION', "Ви повинні обрати опцію!!");
+define('_MD_SEARCHTOPIC', "Пошук теми");
+define('_MD_SHOWSEARCH', "Показати результати:");
+define('_MD_SEARCHPOSTTEXT', "текстові повідомлення");
+define('_MD_SELECT_STARTLAG', "Почати відсилку обраних текстів");
+define('_MD_SELECT_STARTLAG_DESC', "Оберіть текст з X характеристик перед першим ключовим словом");
+define('_MD_SELECT_LENGTH', "Довжина обраного тексту");
+define('_MD_SELECT_HTML', "Прибрати усі html з результатів?");
+define('_MD_SELECT_EXCLUDE', "Виключити ці теги:");
+define('_MD_SELECT_TAG', "Тег");
+define('_MD_CAN_PDF', "Ви <strong>можете</strong> створти pdf.<br />");
+define('_MD_CANNOT_PDF', "Ви <strong>не можете</strong> створти pdf.<br />");
+define('_MD_CAN_PRINT', "Ви <strong>можете</strong> роздрукувати сторінку.<br />");
+define('_MD_CANNOT_PRINT', "Ви <strong>не можете</strong> роздрукувати сторінку.<br />");
+define('_MD_NORIGHTTOPDF', "У вас немає прав створювати pdfна цьому форумі.");
+define('_MD_NORIGHTTOPRINT', "У вас немає прав роздруковувати на цьому форумі.");
+// irmtfan for new block system
+define('_MD_TOPICHASNOTPOLL', "В темі немає опитування");
+define('_MD_VOTED', "Проголосовані теми");
+define('_MD_UNVOTED', "Непроголосовані теми");
+define('_MD_VIEWED', "Переглянуті теми");
+define('_MD_UNVIEWED', "Непереглянуті теми");
+define('_MD_REPLIED', "Відповідені теми");
+define('_MD_READ', "Прочитані теми");
+define('_MD_POLL_POLL', "Опитування");
+define('_MD_PAGENAV_DISPLAY', "Відобразити навігацію");
+?>

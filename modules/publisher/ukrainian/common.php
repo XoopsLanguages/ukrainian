@@ -1,0 +1,106 @@
+<?php
+/**
+ * $Id: common.php 11267 2013-03-20 13:16:32Z cesag $
+ * Module: Publisher
+ * Author: The SmartFactory <www.smartfactory.ca>
+ * Licence: GNU
+ */
+define("_CO_PUBLISHER_MESSAGE_FILE_ERROR","Помилка: Неможливо зберігти завантажений файл з наступних причин:<br />%s");
+define("_CO_PUBLISHER_MESSAGE_WRONG_MIMETYPE","Помилка: Недопустимий тип файлу. Будь ласка, спробуйте відправити ще раз.");
+define("_CO_PUBLISHER_ALLOWCOMMENTS","Чи може стаття бути прокоментована?");
+define("_CO_PUBLISHER_AUTHOR_ALIAS","Псевдонім автору");
+define("_CO_PUBLISHER_AUTHOR_ALIAS_DSC","Виберіть псевдонім плаката, що буде використовуватись замість 'анонімних' і встановить власний ідентифікатор статті до 0");
+define("_CO_PUBLISHER_AVAILABLE_PAGE_WRAP","Доступні сторінки щоб перегорнути");
+define("_CO_PUBLISHER_AVAILABLE_PAGE_WRAP_DSC","Це сторінки доступні для обгортання в тілі. Натисніть на сторінку(и), яку(і) ви б хотіли обгорнути. Працюйте тільки з  XOOPS редактором у цей час. Додати в ручну, якщо ви працюєте в іншому редакторі.");
+define("_CO_PUBLISHER_DATESUB","Дата публікації");
+define("_CO_PUBLISHER_DATESUB_DSC","Оберіть дату публікації");
+define("_CO_PUBLISHER_ITEM_META_DESCRIPTION","Мета-опису");
+define("_CO_PUBLISHER_ITEM_META_DESCRIPTION_DSC","Для того, щоб допомогти пошуковим системам ви можете налаштувати мета-опису, яку б ви хотіли використуовувати для цієї статті. Якщо ви залишите це поле порожнім при створенні категорії, це поле буде автоматично заповнене коротким описом цієї статті.");
+define("_CO_PUBLISHER_ITEM_META_KEYWORDS","Мета ключові слова");
+define("_CO_PUBLISHER_ITEM_META_KEYWORDS_DSC","Для того, щоб допомогти пошуковим системам ви можете налаштувати ключові слова, які ви б хотіли використовувати для цієї статті. Якщо залишити це поле порожнім, при створенні статті, буде автоматично заповнюватись словами зі зведеної області цієї статті.");
+define("_CO_PUBLISHER_ITEM_SHORT_URL","Коротка адреса URL");
+define("_CO_PUBLISHER_ITEM_SHORT_URL_DSC","При використанні функції SEO цього модуля, ви можете вказати коротку адресу URL для цієї статті. Це поле є необов'язковим.");
+define("_CO_PUBLISHER_OFFLINE","Офлайн");
+define("_CO_PUBLISHER_PERMISSIONS_ITEM","Дозвіл");
+define("_CO_PUBLISHER_PERMISSIONS_ITEM_DSC","Групи, які мають дозвіл бачити ці пункти.");
+define("_CO_PUBLISHER_PUBLISHED","Опубліковано");
+define("_CO_PUBLISHER_REJECTED","Відхилено");
+define("_CO_PUBLISHER_STATUS","Статус");
+define("_CO_PUBLISHER_STATUS_DSC","Оберіть статус цієї статті");
+define("_CO_PUBLISHER_SUBMITTED","Представлено");
+define("_CO_PUBLISHER_UID","Ім'я постеру");
+define("_CO_PUBLISHER_UID_DSC","Оберіть ім'я для постеру");
+define("_CO_PUBLISHER_WEIGHT","Вага");
+define("_CO_PUBLISHER_ITEM_UPLOAD_FILE","Завантажити файл");
+define("_CO_PUBLISHER_ITEM_UPLOAD_FILE_DSC","Оберіть файл з вашого комп'ютера, щоб прікріпити його до цієї статті. Ви зможете додати кілька файлів, після створення статті. Просто відредагуйте статтю і виділіть в нижній частині сторінки кнопку 'Додати файл'.<br /><br />Наприклад, ви можете додати документ Word, або документ Excel. Ви навіть можете завантажити Flash-файл, і він буде безпосередньо вбудований в вашу статтю! ");
+//define("_CO_PUBLISHER_OPTIONS","Опції");
+define("_CO_PUBLISHER_DISPLAY_SUMMARY","Відображати короткий зміст на сторінці?");
+define("_CO_PUBLISHER_DOHTML","Включити HTML теги");
+define("_CO_PUBLISHER_DOIMAGE","Включити зображення");
+define("_CO_PUBLISHER_DOLINEBREAK","Включити розрив рядка");
+define("_CO_PUBLISHER_DOSMILEY","Включити іконки смайликів");
+define("_CO_PUBLISHER_DOXCODE","Включити XOOPS коди");
+define("_CO_PUBLISHER_EDIT","Редагувати статтю");
+define("_CO_PUBLISHER_CLONE","Дублювати статтю");
+define("_CO_PUBLISHER_ADD_FILE","Додати файл");
+define("_CO_PUBLISHER_DELETE","Видалити статтю");
+define("_CO_PUBLISHER_PDF","Переглянути цю статтю в PDF форматі");
+define("_CO_PUBLISHER_PRINT","Роздрукувати статтю");
+define("_CO_PUBLISHER_MAIL","Надіслати статтю");
+define("_CO_PUBLISHER_INTITEM","Подивитись на статтю на %s");
+define("_CO_PUBLISHER_INTITEMFOUND","Це цікава стаття, що я знайшов на %s");
+define("_CO_PUBLISHER_POSTEDBY","Опубліковано %s на %s");
+define("_CO_PUBLISHER_BODY","Тіло");
+define("_CO_PUBLISHER_BODY_DSC","Тіло статті");
+define("_CO_PUBLISHER_CATEGORY","Категорія");
+define("_CO_PUBLISHER_CATEGORY_DSC","Категорія статті.");
+define("_CO_PUBLISHER_IMAGE_ITEM","Стаття ознаками зображення");
+define("_CO_PUBLISHER_IMAGE_ITEM_DSC","Зображення, що представляю статтю");
+define("_CO_PUBLISHER_IMAGE_UPLOAD","Завантажити зображення");
+//define("_CO_PUBLISHER_IMAGE_UPLOAD_ITEM_DSC","Оберіть зображення на вашому комп'ютері.<br />Це зображення буде завантажено на сайт <br />і встановлено як зображення статті. ");
+define("_CO_PUBLISHER_SUBCATEGORIES_INFO","Підкатегорії в межах <em>%s</em> :");
+define("_CO_PUBLISHER_SUMMARY","Блок резюме");
+define("_CO_PUBLISHER_SUMMARY_DSC","Це резюме використовується для блоків, індексу і категоріяї сторінок. Не відображається всередині статті.");
+define("_CO_PUBLISHER_TITLE","Назва");
+define("_CO_PUBLISHER_SUBTITLE","Підзаголовок");
+define("_CO_PUBLISHER_ERROR","На жаль, сталася якась помилка!");
+define("_CO_PUBLISHER_SORTBY","Сортувати за");
+define("_CO_PUBLISHER_ADD","Додати");
+define("_CO_PUBLISHER_REMOVE","Видалити");
+define("_CO_PUBLISHER_PREVIEW","Попередній перегляд");
+define("_CO_PUBLISHER_CREATE","Створити");
+define("_CO_PUBLISHER_CLEAR","Очистити");
+define("_CO_PUBLISHER_CANCEL","Скасувати");
+define("_CO_PUBLISHER_IMAGE_ITEMS","Зображення статті");
+define("_CO_PUBLISHER_IMAGE_ITEMS_DSC","Будь ласка, оберіть зображення, пов'язані з цією статею");
+define("_CO_PUBLISHER_IMAGE_PREVIEW","Попередній перегляд зображення");
+define("_CO_PUBLISHER_NOTIFY","Повідомляти про публікації?");
+define("_CO_PUBLISHER_FILEUPLOAD_ERROR","Сталася помилка при завантаженні файлу.");
+define("_CO_PUBLISHER_FILEUPLOAD_SUCCESS","Файл був успішно завантажений.");
+define("_CO_PUBLISHER_NEW_FEATURE","Нова функція!");
+define("_CO_PUBLISHER_TAB_MAIN","Головний");
+define("_CO_PUBLISHER_TAB_IMAGES","Зображення");
+define("_CO_PUBLISHER_TAB_OTHERS","Інше");
+define("_CO_PUBLISHER_TAB_META","Метадані");
+define("_CO_PUBLISHER_TAB_PERMISSIONS","Дозвіл");
+define("_CO_PUBLISHER_IMAGE_UPLOAD_NEW","Завантажити нове зображення");
+//define("_CO_PUBLISHER_IMAGE_UPLOADING","Завантаження");
+define("_CO_PUBLISHER_IMAGE_NICENAME","Введіть ім'я зображення");
+define("_CO_PUBLISHER_IMAGE_CAT_NONE","Не знайдено категорії зображення");
+define("_CO_PUBLISHER_IMAGE_CAT_NOPERM","Ви не маєте дозволу використовувати цю категорію зображення");
+//30/04/2012
+define("_CO_PUBLISHER_TAB_FILES","Файли");
+define("_CO_PUBLISHER_FILE","Файли");
+define("_CO_PUBLISHER_FILE_DESCRIPTION","Опис");
+define("_CO_PUBLISHER_FILE_DESCRIPTION_DSC","Опис файлу, що буде завантажений.");
+define("_CO_PUBLISHER_FILE_NAME_DSC","Ім'я, що буде використовуватись для ідентифікації файлу.");
+define("_CO_PUBLISHER_FILE_STATUS","Файл видимий?");
+define("_CO_PUBLISHER_FILE_STATUS_DSC","якщо ві оберете 'ні', файл не буде видно зі сторінки користувача.");
+define("_CO_PUBLISHER_FILE_TO_UPLOAD","Файл для завантаження:");
+define("_CO_PUBLISHER_FILE_TYPE","Тип файлу");
+define("_CO_PUBLISHER_FILE_UPLOAD_ANOTHER","Завантажити знову");
+define("_CO_PUBLISHER_FILENAME","Ім'я файлу");
+define("_CO_PUBLISHER_FILES_LINKED","Файли пов'язані з цією статею");
+//Added 30/05/2012
+define("_CO_PUBLISHER_EDITFILE","Редагувати файл");
+define("_CO_PUBLISHER_DELETEFILE","Видалити файл");
